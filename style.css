@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f8f5f0;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Decorative Shapes */
+body::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#ffd166;
+    border-radius:50%;
+    top:-100px;
+    left:-100px;
+    opacity:.2;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#118ab2;
+    border-radius:50%;
+    bottom:-120px;
+    right:-120px;
+    opacity:.15;
+}
+
+.container{
+    width:450px;
+    background:#ffffff;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.container h2{
+    text-align:center;
+    color:#073b4c;
+    margin-bottom:25px;
+    font-size:2rem;
+    font-weight:600;
+}
+
+.input-section{
+    display:flex;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.input-section input{
+    flex:1;
+    padding:14px;
+    border:2px solid #e8e8e8;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.input-section input:focus{
+    border-color:#118ab2;
+}
+
+#addBtn{
+    padding:14px 20px;
+    border:none;
+    border-radius:12px;
+    background:#ff7f50;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#addBtn:hover{
+    background:#ff6333;
+    transform:translateY(-2px);
+}
+
+#taskList{
+    list-style:none;
+}
+
+#taskList li{
+    background:#f9fafb;
+    border-left:5px solid #118ab2;
+    margin-bottom:12px;
+    padding:14px 16px;
+    border-radius:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+}
+
+#taskList li:hover{
+    transform:translateX(6px);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.task-text{
+    flex:1;
+    cursor:pointer;
+    color:#333;
+    font-weight:500;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:#999;
+    opacity:.7;
+}
+
+.delete-btn{
+    background:#ef476f;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.delete-btn:hover{
+    background:#d90429;
+}
+
+@media(max-width:500px){
+    .container{
+        width:95%;
+        padding:20px;
+    }
+
+    .input-section{
+        flex-direction:column;
+    }
+}
