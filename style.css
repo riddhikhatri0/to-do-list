@@ -155,3 +155,24 @@ body::after{
         flex-direction:column;
     }
 }
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
